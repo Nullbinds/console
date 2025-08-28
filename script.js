@@ -54,10 +54,10 @@ function updateLogDiv() {
   outputHTML = '';
 
   // Generate the output HTML with the gradient colors
-  outputHTML += `log_color Console ${getGradientColor(0)}FF\n`;
+  outputHTML += `log_color General ${getGradientColor(0)}FF\n`;
   lines.forEach((line, i) => {
     if (i > 0) {
-      outputHTML += `log_color Console ${getGradientColor(i - 1)}FF\n`;
+      outputHTML += `log_color General ${getGradientColor(i - 1)}FF\n`;
     }
 
     // If the line is shorter than the longest line, append spaces to the end of it
@@ -116,4 +116,5 @@ fromColor.addEventListener('input', function() {
  });
 toColor.addEventListener('input', function() {
   gradient.style.background = `linear-gradient(to right, ${fromColor.value}, ${toColor.value})`
+
  });
